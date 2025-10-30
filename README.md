@@ -1,57 +1,28 @@
-# student-api
+# Student API
 
-A **minimal Express REST API** for managing students. Perfect as a first GitHub project and portfolio starter.
+This is a simple **REST API** I built using **Node.js and Express.js** as part of my learning in backend development.  
+The API manages basic **student information** like name, major, and GPA, and it performs the usual CRUD operations (Create, Read, Update, Delete).
 
-## ✨ Features
-- CRUD endpoints (`GET/POST/PUT/DELETE`) for students
-- Simple JSON persistence using a file (`/data/students.json`)
-- CORS + request logging (morgan)
-- Clean, beginner-friendly structure
+I made this project to practice building backend systems, working with routes, JSON data, and HTTP requests — all essential concepts in web development.
 
-## 📁 Project Structure
-```text
-student-api/
-├── data/
-│   └── students.json
-├── routes/
-│   └── students.js
-├── .gitignore
-├── package.json
-├── server.js
-└── README.md
-```
+---
 
-## 🚀 Run Locally
-**Requirements:** Node.js 18+
+## ⚙️ Features
+- Add new students  
+- View all students or search by ID  
+- Update student information  
+- Delete a student record  
+- JSON file used as a simple database  
+- Built with clean and organized project structure  
 
-```bash
-npm install
-npm run dev  # or: npm start
-```
+---
 
-API will start at: `http://localhost:3000`
+## 🧠 Tech Stack
+- Node.js  
+- Express.js  
+- JavaScript (ES6 modules)  
+- JSON (for local data storage)
 
-## 🔌 Endpoints
-- `GET /` – health check
-- `GET /api/students` – list all students
-- `GET /api/students/:id` – get one student
-- `POST /api/students` – create student (JSON body: `{ "name": "...", "major": "...", "gpa": 3.4 }`)
-- `PUT /api/students/:id` – update fields
-- `DELETE /api/students/:id` – remove one
+---
 
-### Quick Test (with curl)
-```bash
-curl http://localhost:3000/api/students
-curl -X POST http://localhost:3000/api/students -H "Content-Type: application/json" -d '{"name":"Fatima","major":"IS","gpa":3.7}'
-curl -X PUT http://localhost:3000/api/students/1 -H "Content-Type: application/json" -d '{"gpa":3.4}'
-curl -X DELETE http://localhost:3000/api/students/2
-```
 
-## 🧭 Next Steps (Good for Portfolio)
-- Replace file storage with MongoDB or PostgreSQL
-- Add validation (Joi/Zod) and better error handling
-- Add tests (Jest + Supertest)
-- Deploy to Render/Railway/Heroku
-
-## 📄 License
-MIT
